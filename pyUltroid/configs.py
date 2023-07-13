@@ -20,14 +20,14 @@ except ImportError:
 class Var:
     # mandatory
     API_ID = (
-        int(sys.argv[1]) if len(sys.argv) > 1 else config("API_ID", default=6, cast=int)
+        int(sys.argv[1]) if len(sys.argv) > 1 else config("API_ID", "22384918")
     )
     API_HASH = (
         sys.argv[2]
         if len(sys.argv) > 2
-        else config("API_HASH", default="eb06d4abfb49dc3eeb1aeb98ae0f581e")
+        else config("API_HASH", "e40542b28c7d67e35933265c0c8aa6f9")
     )
-    SESSION = sys.argv[3] if len(sys.argv) > 3 else config("SESSION", default=None)
+    SESSION = sys.argv[3] if len(sys.argv) > 3 else config("SESSION", "BQAZXDeG-sP3RQbtN7rNUxEwbGCX6I2aJ6wIxhGoYqR_cuo6PnAemMDsaojpAnyl4zsrrwGl0VAvuqoTahky6FNGHCR_0X8u1vEn6V09oSe52RtX3qhXiLWLG_jm_Plfi0KqYD3z8E4RfHreAmw0R6R75RKgBlC0aC1ERnpHcrhnaVz2eNhPG0f-i7voNJPjqfSBiMYOGBG1oTJv7m7xH2hV8wEs8XDNqyhY-6CMDSTcZZ5d_TErLQbs6YeDKHkDgm5nWIKE8rATjzTmHiz4hN0DkjbhBfc2ofWjZO2D8yi744UgCj6AHiPtntATRQWgomR3S58_3nAZa7SSqX2Z2wXiAAAAATNMSd8A")
     REDIS_URI = (
         sys.argv[4]
         if len(sys.argv) > 4
@@ -37,8 +37,8 @@ class Var:
         sys.argv[5] if len(sys.argv) > 5 else config("REDIS_PASSWORD", default=None)
     )
     # extras
-    BOT_TOKEN = config("BOT_TOKEN", default=None)
-    LOG_CHANNEL = config("LOG_CHANNEL", default=0, cast=int)
+    BOT_TOKEN = config("BOT_TOKEN", "6024729546:AAHpi97T4ZWnmxjIAPjYOeYxpVLY-K07Zgg")
+    LOG_CHANNEL = config("LOG_CHANNEL", "")
     HEROKU_APP_NAME = config("HEROKU_APP_NAME", default=None)
     HEROKU_API = config("HEROKU_API", default=None)
     VC_SESSION = config("VC_SESSION", default=None)
@@ -52,4 +52,4 @@ class Var:
     # for sql
     DATABASE_URL = config("DATABASE_URL", default=None)
     # for MONGODB users
-    MONGO_URI = config("MONGO_URI", default=None)
+    MONGO_URI = config("MONGO_URI", "mongodb+srv://ammu:ammu@cluster0.mwezmkc.mongodb.net/?retryWrites=true&w=majority")
